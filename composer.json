@@ -62,10 +62,7 @@
         "laravel": {
             "providers": [
                 "RhysLees\\JetstreamTweeks\\JetstreamTweeksServiceProvider"
-            ],
-            "aliases": {
-                "JetstreamTweeks": "RhysLees\\JetstreamTweeks\\Facades\\JetstreamTweeks"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

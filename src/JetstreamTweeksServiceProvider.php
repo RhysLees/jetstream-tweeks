@@ -4,7 +4,6 @@ namespace RhysLees\JetstreamTweeks;
 
 use Livewire\Livewire;
 use RhysLees\JetstreamTweeks\Http\Livewire\DeleteTeamForm;
-use RhysLees\JetstreamTweeks\Http\Livewire\DeleteUserForm;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -22,13 +21,10 @@ class JetstreamTweeksServiceProvider extends PackageServiceProvider
             ->hasViews();
     }
 
-    public function boot()
+    public function bootingPackage()
     {
-        parent::boot();
-
         if (! $this->app->runningInConsole()) {
             Livewire::component('jetstream-tweeks::delete-team-form', DeleteTeamForm::class);
-            Livewire::component('jetstream-tweeks::delete-user-form', DeleteUserForm::class);
         }
     }
 }
