@@ -28,8 +28,8 @@ class JetstreamTweeksServiceProvider extends PackageServiceProvider
     parent::boot();
 
         if (! $this->app->runningInConsole()) {
-            Livewire::component('tenancy::delete-team-form', DeleteTeamForm::class);
-            Livewire::component('tenancy::delete-user-form', DeleteUserForm::class);
+            Livewire::component('jetstream-tweeks::delete-team-form', DeleteTeamForm::class);
+            Livewire::component('jetstream-tweeks::delete-user-form', DeleteUserForm::class);
         }
     }
 }
